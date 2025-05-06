@@ -1,0 +1,87 @@
+jar ky kalala ny tr open this video - https://www.youtube.com/watch?v=V2laxeVyhcA
+
+
+Link to download Virtual Box -> https://drive.google.com/file/d/1geQom5xl1YJhVa0YBtZrB3hH00dDietN/view?usp=sharing
+VM machine ubuntu -> https://bit.ly/3MDZ940
+
+
+Software required - Virtual Box and Virtual machine harddisk(ubuntu)
+
+
+1. Open Virtaul Box
+2. Click new and give name VM1
+3. Type - Linux & Version Ubuntu 64bit -> Next -> Use and existing Virtual Hard disk and then choose our Virtual machine harddisk(ubuntu)
+
+4. similarly create VM2
+
+
+Now(inside Viratul box)
+Click File -> Preferences -> Network -> Click + sign it there is not NAT network -> Ok
+
+
+Right click VM1 -> Settings -> Network -> then select attached to NAt = NAT Network -> Ok
+
+Similary do for VM2
+
+Now we have to start both the VM
+for this either double click on both the VMs or click the Start button
+
+now the both the VM Windows will take time to load once its done it will ask for Login
+
+use vagrant for login 
+and password is also = vagant
+
+login in both the VMs
+
+Now we have to check the Ip address of both the VMs
+
+use the below command in both the VMs
+
+-> ifconfig
+
+we will see that the inet address of both the VMs is different 
+
+
+check if there are any files in VM1
+-> ls
+
+now create a file
+-> touch file1.txt
+
+-> cat file1.txt
+
+-> nano file1.txt 
+
+now a editor like interface will be shown
+enter some text in it like - 
+Hello World . This is CC practical
+
+now Control + S to save the file 
+then Control + X
+
+now we have to tranfer the file to VM2
+
+now in VM2 
+-> ls
+
+in VM1 
+-> cat file1.txt
+
+-> scp file1.txt vagrant@10.0.2.16:/home/vagrant
+
+Note here 10.0.2.16 this number is the inet address of VM2 that we got earlier by ifconfig command
+
+then say yes 
+then passeword - vagrant
+
+then it will transfer our file 
+
+
+Now in VM2 
+-> ls
+
+-> cat file1.txt
+
+
+
+Now if we want to tranfer file from VM2 to vm1 then use the same steps just change the inet address 
