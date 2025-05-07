@@ -1,4 +1,3 @@
-
 # Viva Questions and Answers – Google App Engine (GAE) Setup
 
 ### 1. What is Google App Engine?
@@ -102,8 +101,6 @@ Port **8080**
 **Answer:**  
 It simulates the App Engine runtime environment on your local machine, allowing you to test and debug applications before deployment.
 
-
-
 # Viva Questions and Answers – File Transfer Between Virtual Machines
 
 ### 1. What is virtualization?
@@ -161,12 +158,12 @@ A VMDK (Virtual Machine Disk) file is a virtual disk file used by virtual machin
 ### 9. How can you find the IP address of a VM?
 **Answer:**  
 First, install `net-tools` using:
-```
+```bash
 $ sudo apt install net-tools
 $ sudo apt update
 ```
 Then run:
-```
+```bash
 $ ifconfig
 ```
 This command will display the IP address assigned to the VM.
@@ -177,7 +174,7 @@ This command will display the IP address assigned to the VM.
 **Answer:**  
 SCP (Secure Copy Protocol) is a command-line tool used to securely transfer files between hosts on a network using SSH.  
 Example:
-```
+```bash
 $ scp file.txt username@destination_IP:/path/to/destination
 ```
 
@@ -186,7 +183,7 @@ $ scp file.txt username@destination_IP:/path/to/destination
 ### 11. What is the command to transfer a file from one VM to another?
 **Answer:**  
 Assuming the sender VM's IP is `172.168.2.4` and the receiver VM's IP is `172.168.2.5`, the command is:
-```
+```bash
 $ scp transfer.txt vagrant@172.168.2.5:/home/vagrant
 ```
 
@@ -220,7 +217,6 @@ A NAT Network allows multiple VMs to communicate with each other through virtual
 ### 15. What is the default range of IPs in the CIDR `172.168.2.0/24`?
 **Answer:**  
 The IP range spans from `172.168.2.1` to `172.168.2.254`, supporting up to 254 devices on the same subnet.
-
 
 ### Viva Questions and Answers: TryStack (OpenStack Demo)
 
@@ -291,181 +287,4 @@ git clone https://git.openstack.org/openstack-dev/devstack
 #### Q19. Can we run OpenStack on Windows?
 **A:** OpenStack is designed to run on Linux-based systems. However, it can be tested via virtual machines on Windows using platforms like VirtualBox.
 
-#### Q20. What are the different sources available in the "Source" tab for launching an instance?
-**A:**
-- Image
-- Snapshot
-- Volume
-- Volume Snapshot
-
-
-
-### Viva Questions and Answers: Salesforce Lightning Custom Application
-
-#### Q1. What is Salesforce?
-**A:** Salesforce is a cloud-based software company that provides customer relationship management (CRM) services. It helps businesses manage customer data, sales processes, marketing automation, and service support through a unified platform.
-
-#### Q2. What is the Salesforce Lightning Experience?
-**A:** Salesforce Lightning Experience is a modern user interface for Salesforce applications. It includes a component-based framework for app development and enhanced user experiences like the Lightning App Builder, Lightning Components, and Lightning Sync.
-
-#### Q3. What is the purpose of creating a Custom Object in Salesforce?
-**A:** A Custom Object allows users to create a tailored data structure specific to their business needs. In this project, a Custom Object is used to manage student details such as email, phone, and date of birth.
-
-#### Q4. How do you create a Custom Object in Salesforce Lightning?
-**A:**
-1. Log into the Salesforce Developer account.
-2. Navigate to Object Manager → Create → Custom Object.
-3. Fill in required details and enable "Allow Reports" and "Allow Activities".
-4. Click Save.
-
-#### Q5. What types of fields were added to the Custom Object in the project?
-**A:** Email, Phone, and Date of Birth fields were added to the Custom Object named Student_Detail.
-
-#### Q6. What is the purpose of creating a Tab in Salesforce?
-**A:** Tabs provide navigation to access custom objects directly from the Salesforce interface. It makes the custom object accessible via the UI.
-
-#### Q7. How do you create a new Tab for a Custom Object?
-**A:**
-1. Search for "Tabs" in the Setup menu.
-2. Click "New" and select the Custom Object.
-3. Choose a Tab style and icon.
-4. Save the configuration.
-
-#### Q8. What is a Lightning App in Salesforce?
-**A:** A Lightning App is a custom app built using the Lightning App Builder that bundles together related objects, tabs, and functionalities to create a dedicated workspace for users.
-
-#### Q9. What was the name of the Lightning App created in the mini project?
-**A:** The Lightning App created was named **Student Details Manager**.
-
-#### Q10. What are the steps to create a Lightning App in Salesforce?
-**A:**
-1. Go to App Manager and click "New Lightning App".
-2. Set the App Name and Developer Name.
-3. Configure app options and utility settings (leave defaults).
-4. Add navigation items like Student_Detail.
-5. Assign user profiles (e.g., System Administrator).
-6. Save and Finish.
-
-#### Q11. How do you launch and test the custom application?
-**A:**
-1. Use the App Launcher to open the custom app.
-2. Click on the custom object tab (Student_Detail) → New → Enter data.
-3. Copy the record URL.
-4. Open Developer Tools in Google Chrome and paste the URL to inspect the interface.
-
-#### Q12. What is the use of Developer Tools in this context?
-**A:** Developer Tools are used to inspect HTML, CSS, and JavaScript code and debug user interface issues. It helps verify how the application behaves on the client side.
-
-#### Q13. What are some key advantages of using Salesforce Lightning over Classic?
-**A:**
-- Enhanced user interface and user experience
-- Drag-and-drop app builder (Lightning App Builder)
-- Component-based development
-- Better integration with modern cloud features
-
-#### Q14. What is the use of the “Allow Reports” option while creating a custom object?
-**A:** It enables reporting features on the custom object, allowing users to create reports using the data from that object.
-
-#### Q15. Why do we assign the application to a specific user profile?
-**A:** Assigning user profiles like System Administrator ensures that only authorized users can access or manage the application components.
-
-#### Q16. Can Lightning Apps be used on mobile devices?
-**A:** Yes, Salesforce Lightning Apps are mobile-responsive and accessible via the Salesforce mobile app.
-
-#### Q17. What is Lightning App Builder?
-**A:** It is a point-and-click tool in Salesforce that allows users to build custom pages for Lightning Experience and Salesforce mobile app using components.
-
-#### Q18. What is a Developer Edition in Salesforce?
-**A:** It is a free, fully-featured Salesforce environment used for learning, testing, and developing applications without affecting production data.
-
-#### Q19. Can you deploy this custom app to production?
-**A:** Yes, after proper testing, the custom app can be deployed to a production org using change sets or Salesforce deployment tools like ANT or Salesforce DX.
-
-#### Q20. What are some limitations of the Salesforce Developer Edition?
-**A:**
-- Limited storage
-- Limited API calls
-- Restricted number of users and features
-
-### Viva Questions and Answers: Cloud Computing Lab Assignments (314458)
-
-#### Q1. What is Google App Engine (GAE)?
-**A:** Google App Engine is a Platform as a Service (PaaS) provided by Google Cloud that enables developers to build and deploy applications without managing the underlying infrastructure.
-
-#### Q2. What is the use of the GAE Launcher?
-**A:** GAE Launcher is a graphical tool used to develop, test, and deploy Python-based web applications to Google App Engine. It helps simulate the production environment locally.
-
-#### Q3. What are the steps to launch a web application using GAE Launcher?
-**A:**
-1. Create an application directory with `app.yaml` and main code file.
-2. Open GAE Launcher and add the application.
-3. Run the app locally to test.
-4. Deploy it to Google App Engine using the launcher or `gcloud app deploy`.
-
-#### Q4. What is required in the `app.yaml` file for a GAE application?
-**A:** The `app.yaml` file contains the configuration for the application such as runtime, instance class, handlers, and automatic scaling settings.
-
-#### Q5. What are the methods to transfer files between two virtual machines?
-**A:** Files can be transferred between virtual machines using:
-- **SCP (Secure Copy Protocol)**: `scp file.txt user@remote:/path`
-- **rsync**: Efficient file sync tool: `rsync -avz file.txt user@remote:/path`
-- **Shared Cloud Storage**: Use services like Google Cloud Storage or AWS S3 to share files.
-
-#### Q6. What is SCP and how is it used?
-**A:** SCP (Secure Copy Protocol) is a method for securely transferring files between hosts over SSH. It encrypts both file and authentication data.
-
-#### Q7. What is PaaS? Give an example.
-**A:** Platform as a Service (PaaS) is a cloud computing model that provides a platform allowing customers to develop, run, and manage applications. Example: Google App Engine, Heroku.
-
-#### Q8. What are the steps to deploy a web app in a PaaS environment?
-**A:**
-1. Write the application code.
-2. Add configuration files (e.g., `app.yaml` for GAE).
-3. Use CLI tools like `gcloud` to deploy the app.
-4. Monitor and scale through the cloud console.
-
-#### Q9. What is Firebase Authentication?
-**A:** Firebase Authentication is a service that allows you to authenticate users using only client-side code, with support for email/password, Google, Facebook, and other providers.
-
-#### Q10. How do you retrieve and store user credentials using Firebase Authentication?
-**A:** By integrating Firebase SDK in your application, users can register/login. Their credentials can be verified through Firebase and stored securely using Firestore or Google Cloud Datastore.
-
-#### Q11. What is Google Cloud Datastore?
-**A:** Google Cloud Datastore is a highly scalable NoSQL database service for web and mobile apps, used to store non-relational structured data.
-
-#### Q12. How do GAE, Firebase Auth, and Cloud Datastore work together?
-**A:**
-- Firebase handles user sign-up/sign-in and token generation.
-- GAE hosts the backend logic (e.g., processing requests).
-- Cloud Datastore stores persistent user data like profiles, roles, etc.
-
-#### Q13. What is the standard environment in Google App Engine?
-**A:** The standard environment is a sandboxed runtime (Python, Java, Node.js, etc.) with automatic scaling and fast deployments, ideal for stateless applications.
-
-#### Q14. How does Firebase ensure security while storing user data?
-**A:** Firebase uses secure authentication tokens, rules-based access control, and encryption (at rest and in transit) to protect user data.
-
-#### Q15. Can Firebase Authentication be used without Google App Engine?
-**A:** Yes, Firebase Authentication can be used with any frontend or backend platform, not just GAE. However, integrating with GAE allows more scalable backend services.
-
-#### Q16. What is the role of `firebase.initializeApp()` in a web app?
-**A:** It initializes your Firebase project with configuration settings (API key, project ID, etc.) allowing you to use services like Authentication and Firestore in your app.
-
-#### Q17. Why is GAE considered suitable for deploying scalable web apps?
-**A:** GAE offers features like automatic scaling, versioning, traffic splitting, and built-in security which make it suitable for scalable and reliable web applications.
-
-#### Q18. How can you view logs of your application deployed on GAE?
-**A:** Logs can be viewed using:
-- Google Cloud Console (Logs Explorer)
-- `gcloud app logs read` command in terminal
-
-#### Q19. What is the difference between Google Cloud Storage and Google Cloud Datastore?
-**A:** Cloud Storage is for storing unstructured binary data like images, videos, and backups. Cloud Datastore is for structured NoSQL data like user records and objects.
-
-#### Q20. What is IAM in Google Cloud?
-**A:** IAM (Identity and Access Management) controls who (users) has what access (roles) to which resources in a Google Cloud project.
-
-
-
-
-
+#### Q20.
