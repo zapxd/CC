@@ -1,0 +1,46 @@
+download google cloud cli
+
+open Google cloud cli
+
+-> gcloud init
+
+-> 2
+
+-> webb-12
+
+-> 2 (login with new account)
+
+browser will open 
+
+select the account 
+
+go to console 
+
+create project 
+
+give name and click create
+
+create Billing for the project 
+
+at the left click the three lines and go to billing 
+
+manage billing account 
+
+create account -> give card details 
+
+go the ny project and the click three dots. and then enable billing for our project 
+
+now go to the main page and click the three lines in the left corner and select App Engine
+
+if not there then click more products 
+
+in APP engines search create an application in app engine standard
+
+then select the option which says create your project Google app in standard s nyign in your Google account
+
+then select the 6 point open app creations 
+
+select python language and environment standard 
+
+now in the never there is a terminal option called activate cloud cell click on it 
+
