@@ -42,5 +42,34 @@ then select the 6 point open app creations
 
 select python language and environment standard 
 
-now in the never there is a terminal option called activate cloud cell click on it 
+now in the navbar there is a terminal option called activate cloud cell click on it 
+
+now after the terminal is open enter the following the commands
+
+git clone https://github.com/zapxd/CC
+
+cd CC/GAE
+
+gcloud app deploy
+
+gcloud app browse
+
+
+Note if this doesn't work the run the following commands 
+
+
+git clone 
+https://github.com/GoogleCloudPlatform/python-docs-samples.git
+
+cd python-docs-samples/æepæe/standard_python3/hello world
+
+gcloud app deploy
+
+gcloud app browse
+
+
+
+after entering authorised 
+
+now go to the link
 
